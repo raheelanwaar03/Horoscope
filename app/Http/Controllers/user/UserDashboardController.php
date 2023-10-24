@@ -177,7 +177,6 @@ class UserDashboardController extends Controller
         $image = $validated['image'];
         $imageName = rand(11111, 99999) . '.' . $image->getClientOriginalExtension();
         $image->move(public_path('image'), $imageName);
-        $image = $validated['image'];
 
         $market_img = new marketImages();
         $market_img->name = auth()->user()->name;

@@ -1,11 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div id="appCapsule">
-
-
+    <div id="appCapsule mb-5">
         <div class="section full mt-4">
-
             @foreach ($plans as $plan)
                 <div class="col-12" style="margin-top:20px;">
                     <div class="blog-card"
@@ -36,9 +33,7 @@
                                     class="btn btn-danger">
                                     Calculator</a>
                             </div>
-
                         </div>
-
                         </p>
                     </div>
                 </div>
