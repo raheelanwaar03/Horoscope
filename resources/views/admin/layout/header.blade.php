@@ -93,12 +93,9 @@
                     <svg class="logo-abbr" width="43" height="34" viewBox="0 0 43 34" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <rect x="22.6154" width="19.6154" height="6.53846" rx="3.26923" fill="white" />
-                        <rect x="22.6154" y="9.15387" width="19.6154" height="6.53846" rx="3.26923"
-                            fill="white" />
-                        <rect x="22.6154" y="18.3077" width="19.6154" height="6.53846" rx="3.26923"
-                            fill="white" />
-                        <rect x="0.384583" y="18.3077" width="19.6154" height="6.53846" rx="3.26923"
-                            fill="white" />
+                        <rect x="22.6154" y="9.15387" width="19.6154" height="6.53846" rx="3.26923" fill="white" />
+                        <rect x="22.6154" y="18.3077" width="19.6154" height="6.53846" rx="3.26923" fill="white" />
+                        <rect x="0.384583" y="18.3077" width="19.6154" height="6.53846" rx="3.26923" fill="white" />
                         <rect x="22.6154" y="27.4615" width="19.6154" height="6.53846" rx="3.26923"
                             fill="white" />
                         <rect x="0.384583" y="27.4615" width="19.6154" height="6.53846" rx="3.26923"
@@ -247,6 +244,12 @@
                             <li><a href="{{ route('Admin.Add.Horoscope') }}">Add Horoscope</a></li>
                             <li><a href="{{ route('Admin.All.Horoscope') }}">All Horoscope</a></li>
                         </ul>
+                    </li>
+                    <li>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button type="submit" class="btn btn-danger">Logout</button>
+                        </form>
                     </li>
                 </ul>
                 <div class="copyright">
