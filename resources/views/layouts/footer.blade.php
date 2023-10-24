@@ -17,30 +17,26 @@
             <strong style="color: black;">Lucky Draw</strong>
         </div>
     </a>
-    <a href="{{ route('User.Referral.Link') }}" class="item {{ request()->is('User/Referral/Link') ? 'active' : '' }}">
-        <div class="col">
-            <i class="fa fa-paper-plane-o" aria-hidden="true" style="color: red;font-size:20px"></i>
-            <strong style="color: black;">Promotion</strong>
-        </div>
-    </a>
     <a href="#" data-toggle="modal" data-target="#model" class="item">
         <div class="col">
             <i class="fa fa-star-half-o" aria-hidden="true" style="color: red;font-size:20px"></i>
             <strong style="color: black;">Horoscope</strong>
         </div>
     </a>
-    @if(auth()->user())
-     <a href="{{ route('User.Picture.Page') }}" class="item {{ request()->is('User/Picture/Page') ? 'active' : '' }}">
-        <div class="col">
-            <i class="fa fa-map-o" aria-hidden="true" style="color: red;font-size:20px"></i>
-            <strong style="color: black;">MarketPlace</strong>
-        </div>
-    </a>
+    @if (auth()->user())
+        <a href="{{ route('User.Picture.Page') }}"
+            class="item {{ request()->is('User/Picture/Page') ? 'active' : '' }}">
+            <div class="col">
+                <i class="fa fa-map-o" aria-hidden="true" style="color: red;font-size:20px"></i>
+                <strong style="color: black;">MarketPlace</strong>
+            </div>
+        </a>
     @endif
-    <a href="{{ route('Images') }}" class="item {{ request()->is('User/Picture/Page') ? 'active' : '' }}">
+
+    <a href="{{ route('User.Referral.Link') }}" class="item {{ request()->is('User/Referral/Link') ? 'active' : '' }}">
         <div class="col">
-            <i class="fa fa-map-o" aria-hidden="true" style="color: red;font-size:20px"></i>
-            <strong style="color: black;">MarketPlace</strong>
+            <i class="fa fa-paper-plane-o" aria-hidden="true" style="color: red;font-size:20px"></i>
+            <strong style="color: black;">Promotion</strong>
         </div>
     </a>
 
