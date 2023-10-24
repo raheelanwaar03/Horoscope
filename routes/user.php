@@ -17,7 +17,7 @@ Route::name('User.')->prefix('User/')->middleware('auth','user')->group(function
     Route::get('One/Rupee',[UserDashboardController::class,'oneRupee'])->name('One.Rupee');
     Route::post('Buy/One/Rupee/{id}',[UserDashboardController::class,'buyOneRupee'])->name('One.Rupee.Buy');
     Route::get('Profile',[UserDashboardController::class,'profile'])->name('Profile');
-    Route::get('Plans/Calculator',[UserDashboardController::class,'calculator'])->name('Plans.calculator');
+    Route::get('Plans/Calculator/{id}',[UserDashboardController::class,'calculator'])->name('Plans.calculator');
     Route::get('Picture/Page',[UserDashboardController::class,'picture'])->name('Picture.Page');
     Route::post('Store/Picture/Page',[UserDashboardController::class,'store_picture'])->name('Store.Picture');
     Route::post('Date-Of-Birth',[UserDashboardcontroller::class,'birthDate'])->name('Date.of.Birth');

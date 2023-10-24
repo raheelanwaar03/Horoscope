@@ -28,11 +28,12 @@
                                 <br><br>
                                 <form action="{{ route('User.Buy.Plan', ['id' => $plan->id]) }}" method="POST">
                                     @csrf
-                                    <button type="submit" class="btn btn-warning mb-2 px-3">
+                                    <button type="submit" class="btn btn-warning mb-2" style="width:80px">
                                         Subscribe
                                     </button>
                                 </form>
-                                <a href="{{ route('User.Plans.calculator') }}" class="btn btn-danger px-3">
+                                <a href="{{ route('User.Plans.calculator', ['id' => $plan->id]) }}" style="width:80px"
+                                    class="btn btn-danger">
                                     Calculator</a>
                             </div>
 
