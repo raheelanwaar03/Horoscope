@@ -121,13 +121,14 @@ class UserDashboardController extends Controller
     {
         $item = OneRupeeProducts::find($id);
         $item_price = $item->price;
-        if ($item_price > auth()->user()->balance) {
+        $total_price = $item_price * $request->qty;
+        if ($total_price > auth()->user()->balance) {
             return redirect()->back()->with('error', 'you have not enough balance');
         }
 
         // deducted amount from user account
         $user = User::where('id', auth()->user()->id)->first();
-        $user->balance -= $item_price;
+        $user->balance -= $total_price;
         $user->save();
 
         $invested = new UserInvest();

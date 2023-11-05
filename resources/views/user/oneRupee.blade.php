@@ -36,6 +36,7 @@
                                                 <button type="submit" class="btn btn-warning" style="width: 80px">
                                                     Buy More
                                                 </button>
+                                                <input type="number" name="qty" min="1" value="1" style="width: 25px">
                                             </form>
                                         </center>
                                     </div>
@@ -67,7 +68,5 @@
 
                 </div>
             </div>
-
-
         </div>
     @endsection
