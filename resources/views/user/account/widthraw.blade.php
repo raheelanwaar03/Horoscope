@@ -15,7 +15,7 @@
                         <p style="color: black;padding-left: 5px;">Welcome to clip app</p>
                         <p style="color: black;padding-left: 5px;margin-top: -15px;font-size: 10px;">Available
                             Balance</p>
-                        <h2 style="color: black;padding-left: 5px;margin-top: -15px;font-weight: bold;">PKR {{ auth()->user()->balance }}
+                        <h2 style="color: black;padding-left: 5px;margin-top: -15px;font-weight: bold;">$ {{ auth()->user()->balance }}
                         </h2>
                     </div>
                     <div class="col-5">
@@ -63,7 +63,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="">Trc 20 Id</label>
-                                    <input type="number" name="trc20"
+                                    <input type="text" name="trc20"
                                         placeholder="Enter Trc20 id for widthrawal" class="form-control">
                                 </div>
                                 <div class="mt-2">

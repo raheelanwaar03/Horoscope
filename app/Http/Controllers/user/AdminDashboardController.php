@@ -5,6 +5,7 @@ namespace App\Http\Controllers\user;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\UserDeposit;
+use App\Models\UserWidthraw;
 use Illuminate\Http\Request;
 
 class AdminDashboardController extends Controller
@@ -69,5 +70,28 @@ class AdminDashboardController extends Controller
         return redirect()->back()->with('success','Deposit request rejected successfully');
     }
 
+    // Widthraw Requests
+
+    public function pendingWidthraw()
+    {
+        $widthraw_requests = UserWidthraw::where('status','pending')->get();
+        return view('admin.widthraw.pending',compact('widthraw_requests'));
+    }
+
+    public function approveWidthraw($id)
+    {
+        $widthraw = UserWidthraw::find($id);
+        $widthraw->status = 'approved';
+        $widthraw->save();
+        return redirect()->back()->with('success','Widthraw approved successfully');
+    }
+
+    public function rejectWidthraw($id)
+    {
+        $widthraw = UserWidthraw::find($id);
+        $widthraw->status = 'rejected';
+        $widthraw->save();
+        return redirect()->back()->with('success','Widthraw rejected successfully');
+    }
 
 }

@@ -17,6 +17,12 @@ Route::name('Admin.')->prefix('Admin/')->middleware('auth','admin')->group(funct
     Route::get('All/Deposit/Rejected/Requests',[AdminDashboardController::class,'rejectedDeposit'])->name('All.Rejected.Requests');
     Route::get('Make/Request/Approve/{id}',[AdminDashboardController::class,'approveRequest'])->name('Approve.Deposit.Request');
     Route::get('Make/Request/Reject/{id}',[AdminDashboardController::class,'rejectRequest'])->name('Reject.Deposit.Request');
+    // Widtharw routes
+    Route::get('All/Widthraw/Pending/Requests',[AdminDashboardController::class,'pendingWidthraw'])->name('All.Pending.Widthraw.Requests');
+    Route::get('All/Widthraw/Approved/Requests',[AdminDashboardController::class,'approvedWidthraw'])->name('All.Approved.Widthraw.Requests');
+    Route::get('All/Widthraw/Rejected/Requests',[AdminDashboardController::class,'rejectedWidthraw'])->name('All.Rejected.Widthraw.Requests');
+    Route::get('Make/Widthraw/Approve/{id}',[AdminDashboardController::class,'approveWidthraw'])->name('Approved.Widthraw.Request');
+    Route::get('Make/Widthraw/Rejected/{id}',[AdminDashboardController::class,'rejectWidthraw'])->name('Rejected.Widthraw.Request');
 
 
     Route::get('User/Details/{id}',[AdminDashboardController::class,'details'])->name('User.Details');
