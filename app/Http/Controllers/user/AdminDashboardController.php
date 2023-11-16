@@ -78,6 +78,18 @@ class AdminDashboardController extends Controller
         return view('admin.widthraw.pending',compact('widthraw_requests'));
     }
 
+    public function approvedWidthraw()
+    {
+        $widthraw_requests = UserWidthraw::where('status','approved')->get();
+        return view('admin.widthraw.approved',compact('widthraw_requests'));
+    }
+
+    public function rejectedWidthraw()
+    {
+        $widthraw_requests = UserWidthraw::where('status','rejected')->get();
+        return view('admin.widthraw.rejected',compact('widthraw_requests'));
+    }
+
     public function approveWidthraw($id)
     {
         $widthraw = UserWidthraw::find($id);

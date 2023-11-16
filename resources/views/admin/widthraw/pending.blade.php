@@ -26,7 +26,7 @@
                                         @foreach ($widthraw_requests as $user)
                                             <tr>
                                                 <td>{{ $user->name }}</td>
-                                                <td>{{ $user->trxId }}</td>
+                                                <td>{{ $user->trc20 }}</td>
                                                 <td>{{ $user->amount }}</td>
                                                 <td>{{ $user->status }}</td>
                                                 <td>{{ $user->created_at }}</td>
