@@ -42,7 +42,7 @@
                                 <div class="card-header border-0">
                                     <div class="wallet-info">
                                         <span class="font-w400 d-block text-white">Total Investment</span>
-                                        <h4 class="fs-24 font-w600 mb-0 d-inline-flex me-2">{{ investment() }}</h4>
+                                        <h4 class="fs-24 font-w600 mb-0 d-inline-flex me-2">${{ investment() }}</h4>
                                     </div>
                                     <div class="wallet-icon">
                                         <svg width="62" height="39" viewBox="0 0 62 39" fill="none"
