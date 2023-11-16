@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="row">
-                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
                             <div class="card  wallet blue">
                                 <div class="boxs">
                                     <span class="box one"></span>
@@ -31,7 +31,7 @@
                                 </div>
                             </div>
                         </div>
-                        {{--<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
                             <div class="card  wallet blue">
                                 <div class="boxs">
                                     <span class="box one"></span>
@@ -41,8 +41,8 @@
                                 </div>
                                 <div class="card-header border-0">
                                     <div class="wallet-info">
-                                        <span class="font-w400 d-block text-white">Pending Users</span>
-                                        <h4 class="fs-24 font-w600 mb-0 d-inline-flex me-2">{{ pendingUser() }}</h4>
+                                        <span class="font-w400 d-block text-white">Total Investment</span>
+                                        <h4 class="fs-24 font-w600 mb-0 d-inline-flex me-2">{{ investment() }}</h4>
                                     </div>
                                     <div class="wallet-icon">
                                         <svg width="62" height="39" viewBox="0 0 62 39" fill="none"
@@ -56,7 +56,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                        {{-- <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
                             <div class="card  wallet blue">
                                 <div class="boxs">
                                     <span class="box one"></span>
