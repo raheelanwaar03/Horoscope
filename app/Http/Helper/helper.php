@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Recored;
 use App\Models\User;
 use App\Models\UserInvest;
 use App\Models\UserWidthraw;
@@ -46,4 +47,14 @@ function widthrawal()
         $total_widthraw += $data->amount;
     }
     return $total_widthraw;
+}
+
+function givenAmount()
+{
+    $recored = Recored::get();
+    $total_balance = 0;
+    foreach ($recored as $data) {
+        $total_balance += $data->amount;
+    }
+    return $total_balance;
 }
