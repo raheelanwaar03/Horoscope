@@ -11,6 +11,14 @@ Route::name('Admin.')->prefix('Admin/')->middleware('auth','admin')->group(funct
 
     Route::get('Dashboard',[AdminDashboardController::class,'index'])->name('Dashboard');
     Route::get('All/Users',[AdminDashboardController::class,'users'])->name('All.Users');
+    // new routes added
+    Route::get('All/Deposit/Pending/Requests',[AdminDashboardController::class,'pendingDeposit'])->name('All.Pending.Requests');
+    Route::get('All/Deposit/Approved/Requests',[AdminDashboardController::class,'approvedDeposit'])->name('All.Approved.Requests');
+    Route::get('All/Deposit/Rejected/Requests',[AdminDashboardController::class,'rejectedDeposit'])->name('All.Rejected.Requests');
+    Route::get('Make/Request/Approve/{id}',[AdminDashboardController::class,'approveRequest'])->name('Approve.Deposit.Request');
+    Route::get('Make/Request/Reject/{id}',[AdminDashboardController::class,'rejectRequest'])->name('Reject.Deposit.Request');
+
+
     Route::get('User/Details/{id}',[AdminDashboardController::class,'details'])->name('User.Details');
     Route::post('Change/User/Details/{id}',[AdminDashboardController::class,'changeDetails'])->name('Change.User.Details');
     Route::get('Add/Items',[AdminLuckyDrawController::class,'add'])->name('Add.Items');
